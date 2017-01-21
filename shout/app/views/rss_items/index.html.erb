@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Rss Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Pubdate</th>
+      <th>Guid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rss_items.each do |rss_item| %>
+      <tr>
+        <td><%= rss_item.item %></td>
+        <td><%= rss_item.pubDate %></td>
+        <td><%= rss_item.guid %></td>
+        <td><%= link_to 'Show', rss_item %></td>
+        <td><%= link_to 'Edit', edit_rss_item_path(rss_item) %></td>
+        <td><%= link_to 'Destroy', rss_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rss item', new_rss_item_path %>

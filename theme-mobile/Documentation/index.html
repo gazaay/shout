@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <title>Nella Documentation</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="body-green">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">Nella </span><span class="text-bold">Docs</span>
+                        </a>
+                    </h1>
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                    <li class="active">Quick Start</li>
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Quick Start</h1>
+                    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: Aug 9th, 2016</div>
+                </div><!--//doc-header-->
+                <div class="doc-body">
+                    <div class="doc-content">
+                        <div class="content-inner">
+                          <section id="requirements-section" class="doc-section">
+                              <h2 class="section-title">Requirements</h2>
+                              <div class="section-block">
+                                  <p>Note : This template includes navigation and transitions between pages. Ajax calls are currently used to move between the different pages, so you need to run this template on a web server to make the navigation work properly. <b>(This is not needed when deploying for PhoneGap/Cordova)</b>.<br /><br />However, you can use your own method for the navigation (eg normal links).
+                                  </p>
+                              </div>
+                          </section><!--//doc-section-->
+                            <section id="navbar-section" class="doc-section">
+                                <h2 class="section-title">Navbar Logo</h2>
+                                <div class="section-block">
+                                    <p>To change the logo in the navbar, just replace the <b>logo.png</b> image in the <b>img</b> folder.
+                                    </p>
+                                    <p><code>img/logo.png</code></p>
+                                </div>
+                            </section><!--//doc-section-->
+                            <section id="tabbar-section" class="doc-section">
+                                <h2 class="section-title">Tab bar</h2>
+                                <div id="tabcolor"  class="section-block">
+                                    <h3 class="block-title">Change the active tab color</h3>
+                                    <p>To change the color of the active tab in the tab bar, change the code color in <b>style.css</b> in the Tab Bar section.
+                                    </p>
+                                    <div class="code-block">
+                                        <h6>CSS Code Example to set the color in green</h6>
+                                        <pre><code class="language-css">.toolbar-inner .active .icon{
+  color: #76c488;
+}
+
+.toolbar-inner .active .tabbar-label{
+  color: #76c488;
+}</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="tabicon"  class="section-block">
+                                    <h3 class="block-title">Change the tabs icons</h3>
+                                    <p>Actually, all of the icons come from the <b>Ionicons font</b>. To change the icon of a tab, you just have to replace the ion class name of the <b>&lt;i&gt;</b> element in the Tab Bar section of <b>index.html</b>. You can find all of the Ionicons class names on the <a href="http://ionicons.com/">Ionicons font website</a>.
+                                    </p>
+                                    <div class="code-block">
+                                        <h6>For example, change ion-home to ion-grid</h6>
+                                        <pre><code class="language-markup">&lt;a href=&quot;#view-main&quot; class=&quot;tab-link active&quot;&gt;
+   &lt;i class=&quot;icon ion-home&quot;&gt;&lt;/i&gt;
+   &lt;span class=&quot;tabbar-label&quot;&gt;Home&lt;/span&gt;
+&lt;/a&gt;</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="tabadd" class="section-block">
+                                    <h3 class="block-title">Add a tab</h3>
+                                    <p>To add a new tab in your app, you have first to create the view. For this, copy and paste this html structure, and give to the view div a <b>unique id</b>. For this example, it will be "view-shop". You can now put your content in the <b>page-content</b> div.
+                                    </p>
+                                    <div class="code-block">
+                                      <h6>Html structure for add a view</h6>
+                                      <pre><code class="language-markup">&lt;!-- View shop --&gt;
+&lt;div id=&quot;view-shop&quot; class=&quot;view tab&quot;&gt;
+  &lt;!-- Navbar --&gt;
+  &lt;div class=&quot;navbar&quot;&gt;
+    &lt;div class=&quot;navbar-inner&quot;&gt;
+      &lt;div class=&quot;center&quot;&gt;&lt;img src=&quot;img/logo.png&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- View shop content --&gt;
+  &lt;div class=&quot;pages navbar-fixed&quot;&gt;
+    &lt;div data-page=&quot;index&quot; class=&quot;page&quot;&gt;
+      &lt;div class=&quot;page-content&quot;&gt;
+        &lt;!-- Your content here --&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                    </div><!--//code-block-->
+                                    <p>Next, you have to add the view in the tab bar. Just add a <b>&lt;a&gt;</b> element in the tab bar section. Make sure the <b>href</b> is the same id that you choose for the view. For our example, it will be <b>#view-shop</b> and the final code should look like this :
+                                    </p>
+                                    <div class="code-block">
+                                      <h6>Add the view to the tab bar</h6>
+                                      <pre><code class="language-markup">&lt;!-- Tab bar --&gt;
+&lt;div class=&quot;toolbar tabbar tabbar-labels&quot;&gt;
+  &lt;div class=&quot;toolbar-inner&quot;&gt;
+     &lt;a href=&quot;#view-main&quot; class=&quot;tab-link active&quot;&gt;
+        &lt;i class=&quot;icon ion-home&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;tabbar-label&quot;&gt;Home&lt;/span&gt;
+     &lt;/a&gt;
+     &lt;a href=&quot;#view-contact&quot; class=&quot;tab-link&quot;&gt;
+        &lt;i class=&quot;icon ion-email&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;tabbar-label&quot;&gt;Contact&lt;/span&gt;
+     &lt;/a&gt;
+     &lt;a href=&quot;#view-about&quot; class=&quot;tab-link&quot;&gt;
+        &lt;i class=&quot;icon ion-person&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;tabbar-label&quot;&gt;About&lt;/span&gt;
+     &lt;/a&gt;
+     &lt;a href=&quot;#view-features&quot; class=&quot;tab-link&quot;&gt;
+        &lt;i class=&quot;icon ion-gear-a&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;tabbar-label&quot;&gt;Features&lt;/span&gt;
+     &lt;/a&gt;
+     &lt;a href=&quot;#view-shop&quot; class=&quot;tab-link&quot;&gt;
+        &lt;i class=&quot;icon ion-ios-cart&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;tabbar-label&quot;&gt;Shop&lt;/span&gt;
+     &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            <section id="posts-section" class="doc-section">
+                                <h2 class="section-title">Posts</h2>
+                                <div id="getposts"  class="section-block">
+                                    <h3 class="block-title">Get and display posts</h3>
+                                    <p>To display your posts in the app, you can use Ajax to call your .php file and get the posts. For example my PHP file return a <b>JSON</b> like this :
+                                    </p>
+                                    <div class="code-block">
+                                        <pre><code class="language-json">{
+  "1": {
+    "title": "Welcome to Nella, an awesome Mobile Theme",
+    "thumbnail": "img/thumbnails/image13.jpg",
+    "category": "Music",
+    "color": "red",
+    "date": "1 day ago",
+    "content": "&lt;p&gt;This is an post content example, with some pictures or videos player ...&lt;/p&gt;"
+  },
+  "2": {
+    "title": "With a beautiful responsive design",
+    "thumbnail": "img/thumbnails/image14.jpg",
+    "category": "Travel",
+    "color": "yellow",
+    "date": "2 day ago",
+    "content": "&lt;p&gt;This is an another post content example, with other pictures and other videos :)&lt;/p&gt;"
+  }
+}
+</code></pre>
+                                    </div><!--//code-block-->
+                                    <p>Now, you can call your .php file with ajax. The code below is an example, but you can use your own method/function =)<br />I suggest you to save the posts in a variable to can get the content when a post will opened.
+                                    </p>
+                                    <div class="code-block">
+                                        <pre><code class="language-javascript">// Get posts
+$$.ajax({
+  url: &apos;getPosts.php&apos;,
+  dataType: &apos;json&apos;,
+  timeout: 5000,
+  success: function(posts){
+    // Save posts
+    local_posts = posts;
+    // Display posts
+    $$.each(posts, function(index, post) {
+      $$(&apos;#post-list&apos;).append(
+        &apos;&lt;li&gt;&apos;+
+          &apos;&lt;a href=&quot;post.html?idpost=&apos; + index + &apos;&quot;&gt;&apos;+
+            &apos;&lt;div class=&quot;post-thumbnail&quot;&gt;&lt;img src=&quot;&apos;+post.thumbnail+&apos;&quot;&gt;&lt;/div&gt;&apos;+
+            &apos;&lt;div class=&quot;post-infos&quot;&gt;&apos;+
+              &apos;&lt;div class=&quot;post-title&quot;&gt;&apos;+
+                &apos;&lt;span&gt;&apos;+post.title+&apos;&lt;/span&gt;&apos;+
+              &apos;&lt;/div&gt;&apos;+
+              &apos;&lt;div class=&quot;post-category &apos; + post.color + &apos;&quot;&gt;&apos; + post.category + &apos;&lt;/div&gt;&apos;+
+              &apos;&lt;div class=&quot;post-date&quot;&gt;&lt;i class=&quot;ion-android-time&quot;&gt;&lt;/i&gt;&apos; + post.date + &apos;&lt;/div&gt;&apos;+
+            &apos;&lt;/div&gt;&apos;+
+          &apos;&lt;/a&gt;&apos;+
+        &apos;&lt;/li&gt;&apos;
+      );
+    });
+  },
+  error: function(error){
+    console.log(&apos;Error with the ajax call&apos;);
+  }
+});
+</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="pulltorefresh"  class="section-block">
+                                    <h3 class="block-title">Pull to refresh</h3>
+                                    <p>To activate the pull to refresh, make sure it is correctly declared in app.js (it is declared by default in this template).
+                                    </p>
+                                    <div class="code-block">
+                                        <pre><code class="language-javascript">// Declare pullToRefresh
+var pullToRefreshPosts = $$(&apos;#content-posts&apos;);</code></pre>
+                                    </div><!--//code-block-->
+                                    <p>Now you can listen to the pull to refresh event, do your ajax request when is it triggered, and use the <b>app.pullToRefreshDone()</b> function to end the pull to refresh.<br />There is a complete example below.
+                                      <div class="code-block">
+                                          <pre><code class="language-javascript">// When pullToRefresh is called
+pullToRefreshPosts.on(&apos;refresh&apos;, function (e) {
+
+  // Do your ajax request here (like the above section)
+
+  // And when it is finished, do :
+  app.pullToRefreshDone(pullToRefreshPosts);
+});</code></pre>
+                                      </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="infinitescroll" class="section-block">
+                                    <h3 class="block-title">Infinite scroll</h3>
+                                    <p>To activate infinite scroll, just use the <b>on.('infinite')</b> listener, do your ajax call, and display the posts. Below the code example. (The functions are pre-coded in <b>app.js</b>, you just need to complete it)</p>
+                                    </p>
+                                    <div class="code-block"><pre><code class="language-javascript">// When infiniteScroll is called
+$$(&apos;#content-posts&apos;).on(&apos;infinite&apos;, function () {
+  // Exit, if infinite scroll is in progress
+  if (isLoading) return;
+  // Set loading true
+  isLoading = true;
+
+  // Do your ajax request here (like the get posts and pull to refresh) and display the posts
+  // You can also add the posts to the local array.
+
+  // And when it is finished, set isLoading to false :
+  isLoading = false;
+});</code></pre>
+                                    </div><!--//code-block-->
+                                    <div class="callout-block callout-info">
+                                        <div class="icon-holder">
+                                            <i class="fa fa-info-circle"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">Custom pull to refresh trigger distance :</h4>
+                                            <p>You can change the <code>data-ptr-distance="55"</code> attribute to set a custom pull to refresh trigger distance. It is currently 50(px).</p>
+                                        </div><!--//content-->
+                                    </div>
+                                </div><!--//section-block-->
+                                <div id="openpost"  class="section-block">
+                                    <h3 class="block-title">Open a post</h3>
+                                    <p>When a post is opened (clicked), you have to replace each element of the post page. To do this, we can use the local array we created earlier. Below a code example :
+                                    </p>
+                                    <div class="code-block">
+                                        <pre><code class="language-javascript">// When a post is opened
+app.onPageInit(&apos;post&apos;, function(page){
+
+  // Display back arrow
+  $$(&apos;#view-main .back-hidden&apos;).toggleClass(&apos;back-hidden back-visible&apos;);
+
+  // Get the id of the opened post
+  var idpost = page.query.idpost;
+
+  // Replace the content of each element of the post page by the current opened post (with the local array)
+  $$(&apos;#content-post .page-post-thumbnail&apos;).html(&apos;&lt;img src=&quot;&apos; + local_posts[idpost].thumbnail + &apos;&quot;&gt;&apos;);
+  $$(&apos;#content-post .page-post-title&apos;).html(local_posts[idpost].title);
+  $$(&apos;#content-post .page-post-category&apos;).html(local_posts[idpost].category);
+  $$(&apos;#content-post .page-post-category&apos;).addClass(local_posts[idpost].color);
+  $$(&apos;#content-post .page-post-date&apos;).html(&apos;&lt;i class=&quot;icon ion-android-time&quot;&gt;&apos; + local_posts[idpost].date + &apos;&lt;/i&gt;&apos;);
+  $$(&apos;#content-post .page-post-content&apos;).html(local_posts[idpost].content);
+});</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            <section id="categories-section" class="doc-section">
+                                <h2 class="section-title">Categories</h2>
+                                <div class="section-block">
+                                    <p>The structure of a category is <code>&lt;div class=&quot;post-category colorname&quot;&gt;Travel&lt;/div&gt;</code>
+                                    </p>
+                                    <p>You can currently choose between red, green, blue and yellow, but you can add your own categories color codes. Just add a new class with the color name after the current colors :
+
+                                      <div class="code-block">
+                                        <pre><code class="language-css">/* You can add categories color here */
+.red {
+  background-color: #ff7247;
+}
+
+.green {
+  background-color: #98cd50;
+}
+
+.blue {
+  background-color: #3da0db;
+}
+
+.yellow {
+  background-color: #fec200;
+}</code></pre>
+                                      </div><!--//code-block-->
+                                </div>
+                            </section><!--//doc-section-->
+                            <section id="panel-section" class="doc-section">
+                                <h2 class="section-title">Swipe Panel</h2>
+
+                                <div id="panel-remove" class="section-block">
+                                    <h3 class="block-title">Remove the panel</h3>
+                                    <p>To remove the panel, just delete these two div</p>
+                                    <div class="code-block">
+                                      <h6>Add the view to the tab bar</h6>
+                                      <pre><code class="language-markup">&lt;div class=&quot;panel-overlay&quot;&gt;&lt;/div&gt;
+&lt;!-- Swipe Pannel --&gt;
+&lt;div class=&quot;panel panel-right panel-reveal&quot;&gt;
+  &lt;form id=&quot;search-form&quot; action=&quot;#&quot;&gt;
+    &lt;input type=&quot;text&quot; id=&quot;search-input&quot; class=&quot;search-bar&quot; placeholder=&quot;Search ...&quot;&gt;
+  &lt;/form&gt;
+  &lt;span class=&quot;title-categories&quot;&gt;Categories&lt;/span&gt;
+  &lt;ul id=&quot;categorie-list&quot;&gt;
+    &lt;li&gt;Art&lt;/li&gt;
+    &lt;li&gt;Beauty&lt;/li&gt;
+    &lt;li&gt;Business&lt;/li&gt;
+    &lt;li&gt;Comedy&lt;/li&gt;
+    &lt;li&gt;Education&lt;/li&gt;
+    &lt;li&gt;Fashion&lt;/li&gt;
+    &lt;li&gt;Food&lt;/li&gt;
+    &lt;li&gt;How to&lt;/li&gt;
+    &lt;li&gt;Lifestyle&lt;/li&gt;
+    &lt;li&gt;Photography&lt;/li&gt;
+    &lt;li&gt;Sports&lt;/li&gt;
+    &lt;li&gt;Travel&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="panel-close" class="section-block">
+                                    <h3 class="block-title">Close the panel</h3>
+                                    <p>To close the panel, for example when a category is clicked, you can use this JS function</p>
+                                    <div class="code-block">
+                                      <h6>Close the panel</h6>
+                                      <pre><code class="language-javascript">app.closePanel();</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="panel-color" class="section-block">
+                                    <h3 class="block-title">Panel background color</h3>
+                                    <p>You can change the panel background color using these CSS class</p>
+                                    <div class="code-block">
+                                      <h6>Close the panel</h6>
+                                      <pre><code class="language-css">.panel {
+  background: #fc3763; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #fc3763 , #fc534a); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #fc3763 , #fc534a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}</code></pre>
+                                    </div><!--//code-block-->
+                                    <div class="callout-block callout-success">
+                                        <div class="icon-holder">
+                                            <i class="fa fa-thumbs-up"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">Useful Tip:</h4>
+                                            <p>You can use this free <a href="http://uigradients.com/" target="_blank">UI Gradients</a> website to get some beautiful gradient examples.</p>
+                                        </div><!--//content-->
+                                    </div>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            <section id="about-section" class="doc-section">
+                                <h2 class="section-title">About page</h2>
+                                <div class="section-block">
+                                    <p>To change the about page banner, just replace the <b>banner.jpg</b> image in the <b>img</b> folder.
+                                    </p>
+                                    <p><code>img/banner.jpg</code></p>
+                                    <p>To change the about page avatar, just replace the <b>avatar.jpg</b> image in the <b>img</b> folder.
+                                    </p>
+                                    <p><code>img/avatar.jpg</code></p>
+                                </div>
+                            </section><!--//doc-section-->
+                            <section id="javascript-section" class="doc-section">
+                                <h2 class="section-title">Javascript functions</h2>
+                                <div class="section-block">
+                                    <p>This template use the <b><a href="http://framework7.io/" target="_blank">Framework7</a></b> framework. It is optimized for building iOS and Android HTML apps. It has its own Javascript library but if you want you can use an other JS library like <b>jQuery</b> in addition to the Framework7 library. But I advise you to use the Framework7 functions because they are optimized for mobile (animations, transitions etc.). You can find all these functions on the <b><a href="http://framework7.io/docs/dom.html" targer="_blank">Framework7 Documentation</a></b>. It looks like jQuery, a lot of functions are the same, just use <b>$$</b> instead of <b>$</b>
+                                    </p>
+                                </div>
+                            </section><!--//doc-section-->
+
+
+
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar hidden-xs">
+                        <nav id="doc-nav">
+                            <ul id="doc-menu" class="nav doc-menu" data-spy="affix">
+                                <li><a class="scrollto" href="#requirements-section">Requirements</a></li>
+                                <li><a class="scrollto" href="#navbar-section">Navbar Logo</a></li>
+                                <li>
+                                    <a class="scrollto" href="#tabbar-section">Tab bar</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#tabcolor">Color</a></li>
+                                        <li><a class="scrollto" href="#tabicon">Icons</a></li>
+                                        <li><a class="scrollto" href="#tabadd">Add a tab</a></li>
+                                    </ul><!--//nav-->
+                                </li>
+                                <li>
+                                    <a class="scrollto" href="#posts-section">Posts</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#getposts">Get & display posts</a></li>
+                                        <li><a class="scrollto" href="#pulltorefresh">Pull to refresh</a></li>
+                                        <li><a class="scrollto" href="#infinitescroll">Infinite scroll</a></li>
+                                        <li><a class="scrollto" href="#openpost">Open a post</a></li>
+                                    </ul><!--//nav-->
+                                </li>
+                                <li><a class="scrollto" href="#categories-section">Categories</a></li>
+                                <li>
+                                    <a class="scrollto" href="#panel-section">Swipe Panel</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#panel-remove">Remove panel</a></li>
+                                        <li><a class="scrollto" href="#panel-close">Close panel</a></li>
+                                        <li><a class="scrollto" href="#panel-color">Panel color</a></li>
+                                    </ul><!--//nav-->
+                                </li>
+                                <li><a class="scrollto" href="#about-section">About page</a></li>
+                                <li><a class="scrollto" href="#javascript-section">Javascript functions</a></li>
+                            </ul><!--//doc-menu-->
+                        </nav>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+
+        <div id="promo-block" class="promo-block">
+            <div class="container">
+                <div class="promo-block-inner">
+                    <h3 class="promo-title text-center"><a href="#"> Thank you again for purchasing this theme :)</a></h3>
+                </div><!--//promo-block-inner-->
+            </div><!--//container-->
+        </div><!--//promo-block-->
+    </div><!--//page-wrapper-->
+
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com/" targe="_blank">Xiaoying Riley</a> for developers</small>
+
+        </div><!--//container-->
+    </footer><!--//footer-->
+
+
+    <!-- Main Javascript -->
+    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+</html>

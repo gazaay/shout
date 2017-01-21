@@ -1,0 +1,1 @@
+json.array! @rss_items, partial: 'rss_items/rss_item', as: :rss_item

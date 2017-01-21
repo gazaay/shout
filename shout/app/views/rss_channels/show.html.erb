@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @rss_channel.title %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @rss_channel.link %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @rss_channel.description %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @rss_channel.language %>
+</p>
+
+<p>
+  <strong>Blogchannel:</strong>
+  <%= @rss_channel.blogChannel %>
+</p>
+
+<p>
+  <strong>Copyright:</strong>
+  <%= @rss_channel.copyright %>
+</p>
+
+<p>
+  <strong>Lastbuilddate:</strong>
+  <%= @rss_channel.lastBuildDate %>
+</p>
+
+<p>
+  <strong>Docs:</strong>
+  <%= @rss_channel.docs %>
+</p>
+
+<p>
+  <strong>Generator:</strong>
+  <%= @rss_channel.generator %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @rss_channel.category %>
+</p>
+
+<p>
+  <strong>Managingeditor:</strong>
+  <%= @rss_channel.managingEditor %>
+</p>
+
+<p>
+  <strong>Webmaster:</strong>
+  <%= @rss_channel.webMaster %>
+</p>
+
+<%= link_to 'Edit', edit_rss_channel_path(@rss_channel) %> |
+<%= link_to 'Back', rss_channels_path %>

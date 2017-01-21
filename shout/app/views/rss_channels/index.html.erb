@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Rss Channels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Link</th>
+      <th>Description</th>
+      <th>Language</th>
+      <th>Blogchannel</th>
+      <th>Copyright</th>
+      <th>Lastbuilddate</th>
+      <th>Docs</th>
+      <th>Generator</th>
+      <th>Category</th>
+      <th>Managingeditor</th>
+      <th>Webmaster</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rss_channels.each do |rss_channel| %>
+      <tr>
+        <td><%= rss_channel.title %></td>
+        <td><%= rss_channel.link %></td>
+        <td><%= rss_channel.description %></td>
+        <td><%= rss_channel.language %></td>
+        <td><%= rss_channel.blogChannel %></td>
+        <td><%= rss_channel.copyright %></td>
+        <td><%= rss_channel.lastBuildDate %></td>
+        <td><%= rss_channel.docs %></td>
+        <td><%= rss_channel.generator %></td>
+        <td><%= rss_channel.category %></td>
+        <td><%= rss_channel.managingEditor %></td>
+        <td><%= rss_channel.webMaster %></td>
+        <td><%= link_to 'Show', rss_channel %></td>
+        <td><%= link_to 'Edit', edit_rss_channel_path(rss_channel) %></td>
+        <td><%= link_to 'Destroy', rss_channel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rss channel', new_rss_channel_path %>

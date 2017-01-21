@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @rss_item.item %>
+</p>
+
+<p>
+  <strong>Pubdate:</strong>
+  <%= @rss_item.pubDate %>
+</p>
+
+<p>
+  <strong>Guid:</strong>
+  <%= @rss_item.guid %>
+</p>
+
+<%= link_to 'Edit', edit_rss_item_path(@rss_item) %> |
+<%= link_to 'Back', rss_items_path %>

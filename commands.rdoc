@@ -1,0 +1,1 @@
+rails generate scaffold RssItem item:string pubDate:string guid:string

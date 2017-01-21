@@ -1,0 +1,2 @@
+json.extract! rss_channel, :id, :title, :link, :description, :language, :blogChannel, :copyright, :lastBuildDate, :docs, :generator, :category, :managingEditor, :webMaster, :created_at, :updated_at
+json.url rss_channel_url(rss_channel, format: :json)

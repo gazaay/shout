@@ -1,0 +1,65 @@
+<%= form_for(@rss_channel) do |f| %>
+  <% if @rss_channel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rss_channel.errors.count, "error") %> prohibited this rss_channel from being saved:</h2>
+
+      <ul>
+      <% @rss_channel.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br>
+    <%= f.text_field :link %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :language %><br>
+    <%= f.text_field :language %>
+  </div>
+  <div class="field">
+    <%= f.label :blogChannel %><br>
+    <%= f.text_field :blogChannel %>
+  </div>
+  <div class="field">
+    <%= f.label :copyright %><br>
+    <%= f.text_field :copyright %>
+  </div>
+  <div class="field">
+    <%= f.label :lastBuildDate %><br>
+    <%= f.text_field :lastBuildDate %>
+  </div>
+  <div class="field">
+    <%= f.label :docs %><br>
+    <%= f.text_field :docs %>
+  </div>
+  <div class="field">
+    <%= f.label :generator %><br>
+    <%= f.text_field :generator %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.text_field :category %>
+  </div>
+  <div class="field">
+    <%= f.label :managingEditor %><br>
+    <%= f.text_field :managingEditor %>
+  </div>
+  <div class="field">
+    <%= f.label :webMaster %><br>
+    <%= f.text_field :webMaster %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
